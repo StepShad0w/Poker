@@ -20,7 +20,7 @@ const CardValidator = () => {
           alert(`${cardType} of ${CARD_SUITS[suit]} ${cardColor}`);
         }
       } else {
-        alert(`incorect card`);
+        alert(`incorect card, please try again`);
       }
     }
   };
