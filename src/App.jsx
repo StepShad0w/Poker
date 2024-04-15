@@ -2,22 +2,25 @@ import React, { useState } from "react";
 import { ImSpades } from "react-icons/im";
 import { PiHeartStraightFill } from "react-icons/pi";
 import "./App.css";
-import { cardValues } from "./components/CardValues";
-import { suits, colors } from "./components/CardSuits";
+import { cardValues, suits,colors } from "./utils/constans";
 
 const CardValidator = () => {
   const [cardValue, setCardValue] = useState("");
   const [suit, setSuit] = useState("");
-  const [color, setColor]=useState('')
+  const [color, setColor] = useState("");
   const validateCard = () => {
     if (cardValue && suit) {
       const cardType = cardValues[cardValue];
-      const cardColor = colors[color]
+      const cardColor = colors[color];
+
       if (cardType && cardColor) {
-        alert(`${cardType} of ${suits[suit]} ${cardColor}`);
-      }
-      else{
-        alert(`incorect card`)
+        if (cardType === "Joker") {
+          alert(`${cardColor} ${cardType} `);
+        } else {
+          alert(`${cardType} of ${suits[suit]} ${cardColor}`);
+        }
+      } else {
+        alert(`incorect card`);
       }
     }
   };
@@ -42,7 +45,8 @@ const CardValidator = () => {
             <option value="">Select suit</option>
             {Object.entries(suits).map(([key, value]) => (
               <option key={key} value={key}>
-                {key}{value}
+                {key}
+                {value}
               </option>
             ))}
           </select>
