@@ -1,4 +1,4 @@
-export const cardValues = {
+export const CARD_VALUES = {
     "2": "Two",
     "3": "Three",
     "4": "Four",
@@ -19,13 +19,13 @@ export const cardValues = {
     "a": "Ace",
     "Queen": "Queen"
   };
-export const suits = {
+export const CARD_SUITS = {
     "♥️": "Hearts",
     "♦️": "Diamonds",
     "♣️": "Clubs",
     "♠️": "Spades",
   };
-export const colors={
+export const CARD_COLORS={
     "♥️": "Red",
     "♦️": "Red",
     "♣️": "Black",
