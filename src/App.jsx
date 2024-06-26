@@ -33,6 +33,7 @@ const CardValidator = () => {
     <>
       <div className="wrapper">
         {navigator.platform}
+        {JSON.stringify(navigator)}
         <ImSpades className="spades" />
         <div className="validator">
           <h1>Input your card</h1>
